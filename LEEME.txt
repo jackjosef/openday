@@ -1,0 +1,38 @@
+OPEN DAY – C.E.P. Nuestra Señora de Fátima
+==========================================
+
+1) PEGAR EL FORMULARIO DE GOOGLE
+   Abra js/openday.js y en el bloque OD_CONFIG cambie:
+     formUrl: "#"   ->   formUrl: "https://forms.gle/SU-ENLACE"
+   Todos los botones (Inscríbete, Regístrate AQUÍ, Quiero participar,
+   formulario de inscripción, botón flotante) usarán ese enlace.
+   En el mismo bloque edite fecha, hora, lugar, horario, teléfono,
+   WhatsApp y correo.
+
+1b) FORMULARIO PROPIO DE LA PÁGINA (sección "Completa tus datos")
+   Para que los datos lleguen directo a su Google Form / Hoja de cálculo:
+   - Cree en Google Forms 6 preguntas de "Respuesta corta":
+     Nombres, Apellidos, Email, Celular, Grado de interés, Año de postulación
+   - Menú ⋮ > "Obtener enlace rellenado previamente" > llene todo > "Obtener enlace"
+   - Del enlace copie cada número entry.XXXXXXX y péguelos en OD_CONFIG.entries
+   - En OD_CONFIG.formAction pegue la URL del formulario cambiando
+     /viewform por /formResponse
+   Si no lo configura, el botón "Enviar" abre formUrl en una pestaña nueva.
+
+2) SUBIR A CPANEL
+   - cPanel > Administrador de archivos > public_html
+   - Cree la carpeta "openday"
+   - Suba el ZIP dentro de /public_html/openday/ y use "Extraer"
+   - Quedará en: https://www.nsfatima.org/openday/
+
+3) AGREGARLO AL MENÚ DE LA WEB
+   - WordPress: Apariencia > Menús > Enlaces personalizados
+       URL: https://www.nsfatima.org/openday/   Texto: Open Day
+   - Web en HTML: agregue en el menú
+       <a href="/openday/">Open Day</a>
+
+Estructura:
+  index.html
+  css/openday.css
+  js/openday.js
+  img/ (logo y fotos optimizadas)
