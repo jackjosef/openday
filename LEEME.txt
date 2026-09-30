@@ -1,0 +1,31 @@
+OPEN DAY – C.E.P. Nuestra Señora de Fátima
+==========================================
+
+1) DATOS DEL EVENTO Y BOTONES
+   En js/openday.js (bloque OD_CONFIG) edite fecha, hora, lugar, horario,
+   WhatsApp y correo.
+   Deje formUrl: "#" para que todos los botones de inscripción lleven al
+   formulario de la propia página (sección "Completa tus datos").
+
+1b) DÓNDE LLEGAN LOS DATOS DEL FORMULARIO "Completa tus datos"
+   A una Hoja de cálculo de Google, vía Apps Script.
+   Siga los pasos de apps-script/GUIA_REGISTROS.txt y pegue la URL /exec en
+   OD_CONFIG.scriptUrl (js/openday.js). La carpeta apps-script NO se sube al cPanel.
+
+2) SUBIR A CPANEL
+   - cPanel > Administrador de archivos > public_html
+   - Cree la carpeta "openday"
+   - Suba el ZIP dentro de /public_html/openday/ y use "Extraer"
+   - Quedará en: https://www.nsfatima.org/openday/
+
+3) AGREGARLO AL MENÚ DE LA WEB
+   - WordPress: Apariencia > Menús > Enlaces personalizados
+       URL: https://www.nsfatima.org/openday/   Texto: Open Day
+   - Web en HTML: agregue en el menú
+       <a href="/openday/">Open Day</a>
+
+Estructura:
+  index.html
+  css/openday.css
+  js/openday.js
+  img/ (logo y fotos optimizadas)
